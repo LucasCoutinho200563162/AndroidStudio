@@ -1,6 +1,7 @@
 package com.example.assignment
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +43,16 @@ class MainActivity : AppCompatActivity() {
         binding.btnToSignUp2.setOnClickListener {
             val switchToSignUp2 = Intent(this, SignUp::class.java)
             startActivity(switchToSignUp2)
+        }
+
+
+        // Binding btn Updates
+        binding.btnUpdates.setOnClickListener {
+            // declare val with url to redirect
+            val url = "https://github.blog/changelog/"
+            // Declare the intent and parsing the url as uri
+            val updateIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(updateIntent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
