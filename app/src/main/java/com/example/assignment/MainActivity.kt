@@ -19,20 +19,29 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        // Binding the button login to go to login class
         binding.btnToLogin.setOnClickListener {
-            val switchToLogin2 = Intent(this, Login::class.java)
-            startActivity(switchToLogin2)
+            val switchToLogin = Intent(this, Login::class.java)
+            startActivity(switchToLogin)
         }
 
+        // Binding the button login to go to signup class
         binding.btnToSignUp.setOnClickListener {
-            val switchToSignUp2 = Intent(this, SignUp::class.java)
-            startActivity(switchToSignUp2)
+            val switchToSignUp = Intent(this, SignUp::class.java)
+            startActivity(switchToSignUp)
         }
 
+        // Binding the button login2 to go to login2 class
         binding.btnToLogin2.setOnClickListener {
             val switchToLogin2 = Intent (this, Login2::class.java)
             startActivity(switchToLogin2)
+        }
+
+
+        // Binding the button sign up to go to sign up2 class
+        binding.btnToSignUp2.setOnClickListener {
+            val switchToSignUp2 = Intent(this, SignUp::class.java)
+            startActivity(switchToSignUp2)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

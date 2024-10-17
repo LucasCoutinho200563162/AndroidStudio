@@ -15,7 +15,7 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-
+        // Initiating and setting the binding
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
