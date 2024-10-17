@@ -25,9 +25,9 @@ class SignUp : AppCompatActivity() {
         }
 
         binding.createAccount.setOnClickListener {
-            var username = binding.userName.text.toString()
-            var password = binding.password.text.toString()
-            var confirmPassword = binding.confirmPassword.text.toString()
+            val username = binding.userName.text.toString()
+            val password = binding.password.text.toString()
+            val confirmPassword = binding.confirmPassword.text.toString()
 
             if (password == confirmPassword) {
                 val sharedPreferences: SharedPreferences = getSharedPreferences("UserPref", MODE_PRIVATE)

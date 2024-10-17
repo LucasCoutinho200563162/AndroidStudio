@@ -35,8 +35,8 @@ class Login : AppCompatActivity() {
             val passwordStored = sharedPreferences.getString("PASSWORD", null)
 
             // Getting the values from the field
-            var username = binding.usernameLogin.text.toString()
-            var password = binding.passwordLogin.text.toString()
+            val username = binding.usernameLogin.text.toString()
+            val password = binding.passwordLogin.text.toString()
 
 
             // Compare if the username and password from field matches local data
